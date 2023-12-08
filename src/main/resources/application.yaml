@@ -1,27 +1,25 @@
 server:
-  port: ${PORTA_SERVER}
-  forward-headers-strategy: framework
+  port: 8080
 
 spring:
   datasource:
-    driverClassName: org.postgresql.Driver
-    url: jdbc:postgresql://${URL_BANCO}:${PORTA_BANCO}/thehome
-    username: ${USUARIO_BANCO}
-    password: ${SENHA_BANCO}
+    url: jdbc:postgresql://localhost:5432/thehome
+    username: postgres
+    password: root
     hikari:
       maximum-pool-size: 30
       minimum-idle: 1
   jpa:
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-    show-sql: false
 
 thehome:
   api:
-    user: thehome-api
-    password: 4d2tsRR!edpmwuOzJ!8E80JcWwRGOlgf
+    user: admin
+    password: admin
 
 springdoc:
   swagger-ui:
