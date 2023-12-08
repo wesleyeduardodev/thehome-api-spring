@@ -15,6 +15,21 @@ services:
       - docker-network
     restart: always
 
+  thehome-api:
+    container_name: thehome-api
+    image: thehome-api:latest
+    environment:
+      SERVER_PORT: 8080
+      SPRING_PROFILES_ACTIVE: dev
+      TZ: "America/Sao_Paulo"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+    networks:
+      - docker-network
+    restart: always
+
   pgadmin:
     container_name: pgadmin
     image: dpage/pgadmin4

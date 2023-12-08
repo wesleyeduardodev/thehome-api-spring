@@ -1,22 +1,30 @@
-server:
-  port: 8080
+#arquivo de configuracoes local/default
 
+#port config
+server:
+  port: ${SERVER_PORT}
+
+#profile config
 spring:
+  application:
+    name: "thehome-api"
+
+  config:
+    activate:
+      on-profile:
+        - dev
+
+  #database config
   datasource:
-    url: jdbc:postgresql://localhost:5432/thehome
-    username: postgres
-    password: root
-    hikari:
-      maximum-pool-size: 30
-      minimum-idle: 1
+    url: jdbc:postgresql://postgres-db:5432/thehome?currentSchema=public
+    username: "postgres"
+    password: "root"
+    driver-class-name: "org.postgresql.Driver"
+
   jpa:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-        max_fetch_depth: 3
-    show-sql: true
-    generate-ddl: true
 
 thehome:
   api:
