@@ -24,3 +24,4 @@ thehome:
 springdoc:
   swagger-ui:
     operations-sorter: method
+    path: "/thehome-api/swagger-ui.html"

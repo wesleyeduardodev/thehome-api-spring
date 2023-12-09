@@ -15,19 +15,25 @@ services:
       - docker-network
     restart: always
 
-  pgadmin:
-    container_name: pgadmin
-    image: dpage/pgadmin4
+  thehome-api:
+    container_name: thehome-api
+    image: wesleyeduardodev/thehome-api:latest
     environment:
-      PGADMIN_DEFAULT_EMAIL: "admin@gmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "admin"
+      SERVER_PORT: 3000
+      SPRING_PROFILES_ACTIVE: prod
       TZ: "America/Sao_Paulo"
     ports:
-      - "5433:80"
+      - "80:3000"
     depends_on:
       - postgres-db
     networks:
       - docker-network
+    deploy:
+      resources:
+        limits:
+          memory: 700M
+        reservations:
+          memory: 700M
     restart: always
 
 networks:

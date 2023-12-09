@@ -1,10 +1,6 @@
-#arquivo de configuracoes local/default
-
-#port config
 server:
   port: ${SERVER_PORT}
 
-#profile config
 spring:
   application:
     name: "thehome-api"
@@ -12,9 +8,8 @@ spring:
   config:
     activate:
       on-profile:
-        - dev
+        - test
 
-  #database config
   datasource:
     url: jdbc:postgresql://postgres-db:5432/thehome?currentSchema=public
     username: "postgres"
@@ -22,6 +17,8 @@ spring:
     driver-class-name: "org.postgresql.Driver"
 
   jpa:
+    hibernate:
+      ddl-auto: update
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
@@ -34,3 +31,4 @@ thehome:
 springdoc:
   swagger-ui:
     operations-sorter: method
+    path: "/thehome-api/swagger-ui.html"
