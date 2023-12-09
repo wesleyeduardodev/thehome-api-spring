@@ -12,6 +12,8 @@
 - Copiar jara para EC2: scp ./target/thehome-api-spring-0.0.1-SNAPSHOT.jar ec2-user@"ip_aqui":/home/ec2-user
 
 ## Comandos Docker úteis
-- docker rm $(docker ps -a -q) -f - remover todos os containers
-- docker rmi $(docker images -q) -f  - remover todos as imagens
-- docker volume rm $(docker volume ls -qf dangling=true) - remover todos os volumes
+- Login Docker: docker login
+- Enviar imagem para o DockerHub: docker push wesleyeduardodev/thehome-api
+- Remover todos os containers: docker rm $(docker ps -a -q) -f
+- Remover todos as imagens: docker rmi $(docker images -q) -f
+- Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true) 
