@@ -27,7 +27,7 @@
 - Verificar arquivos: terraform plan
 - Criar estrutura na aws: terraform apply --auto-approve (Ao pesquisar a VPC no conole AWS, pesquisar pela mesma região especificada, aqui no caso "us-east-1")
 - Destruir VPC criada: terraform destroy --auto-approve
-- Entrar na máquina: ssh -i ~/.ssh/thehome_key1 ubunto@3.221.160.232
+- Entrar na máquina: ssh -i ~/.ssh/thehome_key1 ubunto@34.232.44.70
 
 ## SSH
 - Criação de chave: ssh-keygen -t ed25519
