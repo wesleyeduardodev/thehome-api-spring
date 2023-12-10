@@ -27,7 +27,7 @@
 
 #clone your project from git repository
     git clone https://github.com/wesleyeduardodev/thehome-api-spring
-    cd tutorial-spring-docker-terraform-aws
+    cd thehome-api-spring
     git checkout master
     git pull
     cd deploy/docker
