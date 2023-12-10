@@ -19,7 +19,7 @@
 - Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true) 
 
 ## Configuração AWS
-- Configurar profile: aws configure --profile crud_api_clients
+- Configurar profile: aws configure --profile thehome1
 - Consulta diretório: ls ~/.aws
 
 ## Comandos Terraform (Instalar terraforma e jogar no path do Windows)
@@ -27,7 +27,7 @@
 - Verificar arquivos: terraform plan
 - Criar estrutura na aws: terraform apply --auto-approve (Ao pesquisar a VPC no conole AWS, pesquisar pela mesma região especificada, aqui no caso "us-east-1")
 - Destruir VPC criada: terraform destroy --auto-approve
-- Entrar na máquina: ssh -i ~/.ssh/thehome_key ubunto@44.213.99.235
+- Entrar na máquina: ssh -i ~/.ssh/thehome_key1 ubunto@3.221.160.232
 
 ## SSH
 - Criação de chave: ssh-keygen -t ed25519
