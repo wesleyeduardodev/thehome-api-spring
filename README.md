@@ -17,3 +17,13 @@
 - Remover todos os containers: docker rm $(docker ps -a -q) -f
 - Remover todos as imagens: docker rmi $(docker images -q) -f
 - Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true) 
+
+## Configuração AWS
+- Configurar profile: aws configure --profile crud_api_clients
+- Consulta diretório: ls ~/.aws
+
+## Comandos Terraform (Instalar terraforma e jogar no path do Windows)
+- Criar os arquivos de estrutura e instalar o provider: terraform init
+- Verificar arquivos: terraform plan
+- Criar estrutura na aws: terraform apply --auto-approve (Ao pesquisar a VPC no conole AWS, pesquisar pela mesma região especificada, aqui no caso "us-east-1")
+- Destruir VPC criada: terraform destroy --auto-approve

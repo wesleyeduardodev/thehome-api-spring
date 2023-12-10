@@ -35,3 +35,5 @@ build/
 
 .mvn/*
 mvnw*
+src/main/deploy/terraform/.terraform.lock.hcl
+src/main/deploy/terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/5.30.0/windows_amd64/terraform-provider-aws_v5.30.0_x5.exe
