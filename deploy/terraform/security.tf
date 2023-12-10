@@ -27,7 +27,7 @@ resource "aws_security_group_rule" "public_in_ssh" {
 
 resource "aws_key_pair" "thehome_key" {
   key_name   = "thehome_key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("~/.ssh/thehome_key.pub")
 }
 
 resource "aws_security_group_rule" "public_in_http" {
