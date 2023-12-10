@@ -52,7 +52,7 @@ resource "aws_instance" "thehome_ec2_inst" {
   key_name               = aws_key_pair.thehome_key.id
   vpc_security_group_ids = [aws_security_group.thehome_sg.id]
   subnet_id              = aws_subnet.thehome_subnet_pub_1a.id
-
+  user_data = file("userdata.tpl")
   root_block_device {
     volume_size = 8
   }
