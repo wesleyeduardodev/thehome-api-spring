@@ -33,3 +33,6 @@
 - Criação de chave: ssh-keygen -t ed25519
 - Atribuir nome a chave gerada: C:\Users\Wesley Eduardo/.ssh/thehome1_key
 - ls ~/.ssh
+
+## Swagger
+- "DNS-EC2"/thehome-api/swagger-ui.html
