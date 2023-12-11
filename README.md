@@ -17,6 +17,7 @@
 - Remover todos os containers: docker rm $(docker ps -a -q) -f
 - Remover todos as imagens: docker rmi $(docker images -q) -f
 - Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true) 
+- docker logs --follow thehome-api
 
 ## Configuração AWS
 - Configurar profile: aws configure --profile thehome1
@@ -36,3 +37,4 @@
 
 ## Swagger
 - "DNS-EC2"/thehome-api/swagger-ui.html
+
