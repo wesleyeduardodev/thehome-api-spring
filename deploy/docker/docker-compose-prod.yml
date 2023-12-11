@@ -36,6 +36,16 @@ services:
           memory: 700M
     restart: always
 
+  thehome-angular:
+    image: wesleyeduardodev/thehome-angular:latest
+    container_name: thehome-angular-container
+    ports:
+      - "4200:4200"
+    depends_on:
+      - thehome-api
+    networks:
+      - docker-network
+
 networks:
   docker-network:
     driver: bridge
