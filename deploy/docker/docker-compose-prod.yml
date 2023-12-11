@@ -37,7 +37,7 @@ services:
     restart: always
 
   thehome-angular:
-    image: wesleyeduardodev/thehome-angular
+    image: wesleyeduardodev/thehome-angular:latest
     container_name: thehome-angular-container
     ports:
       - "4200:4200"
