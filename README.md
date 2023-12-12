@@ -18,7 +18,8 @@
 - Remover todos as imagens: docker rmi $(docker images -q) -f
 - Remover todos os volumes: docker volume rm $(docker volume ls -qf dangling=true) 
 - docker logs --follow thehome-api
-- docker logs --follow thehome-angular-container
+- docker logs --follow postgres-db
+- docker logs --follow thehome-angular
 
 ## Configuração AWS
 - Configurar profile: aws configure --profile thehome1
