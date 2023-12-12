@@ -19,26 +19,26 @@ services:
     container_name: thehome-api
     image: wesleyeduardodev/thehome-api:latest
     environment:
-      SERVER_PORT: 8080
+      SERVER_PORT: 3000
       SPRING_PROFILES_ACTIVE: test
       TZ: "America/Sao_Paulo"
     ports:
-      - "8080:8080"
+    - "80:3000"
     depends_on:
       - postgres-db
     networks:
       - docker-network
     restart: always
 
-  thehome-angular:
-    image: wesleyeduardodev/thehome-angular
-    container_name: thehome-angular-container
-    ports:
-      - "4200:4200"
-    depends_on:
-      - thehome-api
-    networks:
-      - docker-network
+  #thehome-angular:
+    #image: wesleyeduardodev/thehome-angular
+    #container_name: thehome-angular-container
+    #ports:
+      #- "4200:4200"
+    #depends_on:
+      #- thehome-api
+    #networks:
+      #- docker-network
 
 networks:
   docker-network:
