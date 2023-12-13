@@ -5,7 +5,7 @@
 
 - Gerar build da aplicação antes de gerar a imagem: mvn clean install
 - Gerar imagem da aplicação: docker build -t wesleyeduardodev/thehome-api .
-- Subir container: docker run -p 8080:8080 --name thehome-api thehome-api
+- Subir container: docker run -p 8080:8080 --name thehome-api wesleyeduardodev/thehome-api
 
 - Executar jar: java -jar target/thehome-api-spring-0.0.1-SNAPSHOT.jar
 - Conectar máquina EC2: ssh ec2-user@"ip_aqui"
@@ -44,3 +44,5 @@
 ## Test
 - http://localhost/actuator/health
 
+## JAr
+- thehome-api-spring-0.0.1-SNAPSHOT.jar

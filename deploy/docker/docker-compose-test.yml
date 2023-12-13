@@ -18,7 +18,7 @@ services:
   thehome-api:
     build:
       context: ../../
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.test
     container_name: thehome-api
     image: wesleyeduardodev/thehome-api:latest
     environment:
