@@ -16,6 +16,9 @@ services:
     restart: always
 
   thehome-api:
+    build:
+      context: ../../
+      dockerfile: Dockerfile
     container_name: thehome-api
     image: wesleyeduardodev/thehome-api:latest
     environment:

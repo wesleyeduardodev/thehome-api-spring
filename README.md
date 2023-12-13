@@ -38,5 +38,9 @@
 - ls ~/.ssh
 
 ## Swagger
-- "DNS-EC2"/thehome-api/swagger-ui.html
+- Prod: "DNS-EC2"/thehome-api/swagger-ui.html
+- Local na porta 80: http://localhost/thehome-api/swagger-ui/index.html
+
+## Test
+- http://localhost/actuator/health
 
